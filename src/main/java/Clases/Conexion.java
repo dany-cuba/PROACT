@@ -1,4 +1,3 @@
-
 package Clases;
 
 import java.sql.Connection;
@@ -9,16 +8,16 @@ public class Conexion {
     
     private static Connection conn = null;
     
-    private Connection Conectar() throws SQLException, ClassNotFoundException{
+    public Connection Conectar() throws SQLException, ClassNotFoundException{
         
         Class.forName("com.mysql.cj.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testing","root","");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/proact","root","");
         
         return conn;
     }
     
-    private void desconectar(){
-        conn = null;
+    public Connection desconectar(){
+        return null;
     }
     
 }

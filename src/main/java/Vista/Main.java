@@ -1,8 +1,6 @@
 
 package Vista;
 
-import Clases.Conexion;
-
 public class Main extends javax.swing.JFrame {
 
     public Main() {
@@ -14,41 +12,30 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        contenedor = new javax.swing.JPanel();
         menuBar = new javax.swing.JMenuBar();
         menuOperaciones = new javax.swing.JMenu();
         boletinMenu = new javax.swing.JMenu();
         addBoletin = new javax.swing.JMenuItem();
         delBoletin = new javax.swing.JMenuItem();
         modBoletin = new javax.swing.JMenuItem();
-        entidadMenu = new javax.swing.JMenu();
-        addEntidad = new javax.swing.JMenuItem();
-        delEntidad = new javax.swing.JMenuItem();
-        modEntidad = new javax.swing.JMenuItem();
-        productoresMenu = new javax.swing.JMenu();
-        addProductor = new javax.swing.JMenuItem();
-        delProductor = new javax.swing.JMenuItem();
-        modProductor = new javax.swing.JMenuItem();
+        organizacionesMenu = new javax.swing.JMenu();
+        addOrg = new javax.swing.JMenuItem();
+        delOrg = new javax.swing.JMenuItem();
+        generarBoletinMenu = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PROACT");
 
-        javax.swing.GroupLayout contenedorLayout = new javax.swing.GroupLayout(contenedor);
-        contenedor.setLayout(contenedorLayout);
-        contenedorLayout.setHorizontalGroup(
-            contenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
-        );
-        contenedorLayout.setVerticalGroup(
-            contenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 254, Short.MAX_VALUE)
-        );
-
         menuOperaciones.setText("Operaciones");
 
-        boletinMenu.setText("Boletines");
+        boletinMenu.setText("Observaciones");
 
         addBoletin.setText("Agregar");
+        addBoletin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addBoletinActionPerformed(evt);
+            }
+        });
         boletinMenu.add(addBoletin);
 
         delBoletin.setText("Eliminar");
@@ -64,41 +51,23 @@ public class Main extends javax.swing.JFrame {
 
         menuOperaciones.add(boletinMenu);
 
-        entidadMenu.setText("Entidades Productivas");
+        organizacionesMenu.setText("Organizaciones");
 
-        addEntidad.setText("Agregar");
-        entidadMenu.add(addEntidad);
+        addOrg.setText("Agregar");
+        organizacionesMenu.add(addOrg);
 
-        delEntidad.setText("Eliminar");
-        entidadMenu.add(delEntidad);
+        delOrg.setText("Eliminar");
+        organizacionesMenu.add(delOrg);
 
-        modEntidad.setText("Modificar");
-        modEntidad.addActionListener(new java.awt.event.ActionListener() {
+        menuOperaciones.add(organizacionesMenu);
+
+        generarBoletinMenu.setText("Generar Boletín");
+        generarBoletinMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modEntidadActionPerformed(evt);
+                generarBoletinMenuActionPerformed(evt);
             }
         });
-        entidadMenu.add(modEntidad);
-
-        menuOperaciones.add(entidadMenu);
-
-        productoresMenu.setText("Productores Agrícolas");
-
-        addProductor.setText("Agregar");
-        productoresMenu.add(addProductor);
-
-        delProductor.setText("Eliminar");
-        productoresMenu.add(delProductor);
-
-        modProductor.setText("Modificar");
-        modProductor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modProductorActionPerformed(evt);
-            }
-        });
-        productoresMenu.add(modProductor);
-
-        menuOperaciones.add(productoresMenu);
+        menuOperaciones.add(generarBoletinMenu);
 
         menuBar.add(menuOperaciones);
 
@@ -108,11 +77,11 @@ public class Main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 493, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 254, Short.MAX_VALUE)
         );
 
         pack();
@@ -122,13 +91,15 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_modBoletinActionPerformed
 
-    private void modEntidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modEntidadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_modEntidadActionPerformed
+    private void addBoletinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBoletinActionPerformed
+        AddBoletinDialog dialog = new AddBoletinDialog(this, rootPaneCheckingEnabled);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_addBoletinActionPerformed
 
-    private void modProductorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modProductorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_modProductorActionPerformed
+    private void generarBoletinMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarBoletinMenuActionPerformed
+        BuscarBoletinDialog dialog = new BuscarBoletinDialog(this, rootPaneCheckingEnabled);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_generarBoletinMenuActionPerformed
 
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -156,26 +127,21 @@ public class Main extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Main().setVisible(true);
+               new Main().setVisible(true);                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem addBoletin;
-    private javax.swing.JMenuItem addEntidad;
-    private javax.swing.JMenuItem addProductor;
+    private javax.swing.JMenuItem addOrg;
     private javax.swing.JMenu boletinMenu;
-    private javax.swing.JPanel contenedor;
     private javax.swing.JMenuItem delBoletin;
-    private javax.swing.JMenuItem delEntidad;
-    private javax.swing.JMenuItem delProductor;
-    private javax.swing.JMenu entidadMenu;
+    private javax.swing.JMenuItem delOrg;
+    private javax.swing.JMenuItem generarBoletinMenu;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu menuOperaciones;
     private javax.swing.JMenuItem modBoletin;
-    private javax.swing.JMenuItem modEntidad;
-    private javax.swing.JMenuItem modProductor;
-    private javax.swing.JMenu productoresMenu;
+    private javax.swing.JMenu organizacionesMenu;
     // End of variables declaration//GEN-END:variables
 }

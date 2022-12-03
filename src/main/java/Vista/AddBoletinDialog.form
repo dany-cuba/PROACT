@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" value="Agregar Bolet&#xed;n"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="evaporizacionLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="precipitacionesLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="velMediaVientoLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempMinLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempMaxLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="fechaLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="evaporizacionCaibarienText" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="velMediaVientoCaibarienText" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="precipitacionesCaibarienText" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="tempMinCaibarienText" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="tempMaxCaibarienText" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="caibarienLabel" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="velMediaVientoSaguaLaGrandeText" max="32767" attributes="0"/>
+                                  <Component id="precipitacionesSaguaLaGrandeText" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tempMinSaguaLaGrandeText" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tempMaxSaguaLaGrandeText" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="SaguaLaGrandeLabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="evaporizacionSaguaLaGrandeText" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="tempMaxLaPiedraText" alignment="1" pref="92" max="32767" attributes="0"/>
+                                  <Component id="tempMinLaPiedraText" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="precipitacionesLaPiedraText" alignment="1" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="laPiedraLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="velMediaVientoLaPiedraText" max="32767" attributes="0"/>
+                                  <Component id="evaporizacionLaPiedraText" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="decenaLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                              <Component id="mesLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                              <Component id="annoLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="addButton" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="tempMaxSantoDomingoText" min="-2" pref="85" max="-2" attributes="0"/>
+                                      <Component id="tempMinSantoDomingoText" min="-2" pref="85" max="-2" attributes="0"/>
+                                      <Component id="precipitacionesSantoDomingoText" min="-2" pref="85" max="-2" attributes="0"/>
+                                      <Component id="velMediaVientoSantoDomingoText" min="-2" pref="85" max="-2" attributes="0"/>
+                                      <Component id="evaporizacionSantoDomingoText" min="-2" pref="85" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="cancelButton" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="tempMinYabuText" min="-2" pref="50" max="-2" attributes="0"/>
+                                          <Component id="tempMaxYabuText" min="-2" pref="50" max="-2" attributes="0"/>
+                                          <Component id="precipitacionesYabuText" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                          <Component id="velMediaVientoYabuText" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                          <Component id="evaporizacionYabuText" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="santoDomingoLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="yabuLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="decenaCB" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="mesCB" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="annoCB" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="annoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="decenaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="fechaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="decenaCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mesCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="annoCB" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="caibarienLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="SaguaLaGrandeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="laPiedraLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="santoDomingoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="yabuLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tempMaxCaibarienText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempMaxLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempMaxSaguaLaGrandeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempMaxLaPiedraText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempMaxSantoDomingoText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempMaxYabuText" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tempMinCaibarienText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempMinSaguaLaGrandeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempMinLaPiedraText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempMinSantoDomingoText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempMinYabuText" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="precipitacionesCaibarienText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="precipitacionesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="precipitacionesSaguaLaGrandeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="precipitacionesLaPiedraText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="precipitacionesSantoDomingoText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="precipitacionesYabuText" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="velMediaVientoLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="evaporizacionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="evaporizacionCaibarienText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="evaporizacionSaguaLaGrandeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="evaporizacionLaPiedraText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="evaporizacionSantoDomingoText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="evaporizacionYabuText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="velMediaVientoCaibarienText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="velMediaVientoSaguaLaGrandeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="velMediaVientoLaPiedraText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="velMediaVientoSantoDomingoText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="velMediaVientoYabuText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="addButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="decenaLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Decena:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mesLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mes:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="annoLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A&#xf1;o:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="fechaLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Fecha:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="decenaCB">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="3">
+            <StringItem index="0" value="Primera"/>
+            <StringItem index="1" value="Segunda"/>
+            <StringItem index="2" value="Tercera"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decenaCBActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="mesCB">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="12">
+            <StringItem index="0" value="Enero"/>
+            <StringItem index="1" value="Febrero"/>
+            <StringItem index="2" value="Marzo"/>
+            <StringItem index="3" value="Abril"/>
+            <StringItem index="4" value="Mayo"/>
+            <StringItem index="5" value="Junio"/>
+            <StringItem index="6" value="Julio"/>
+            <StringItem index="7" value="Agosto"/>
+            <StringItem index="8" value="Septiembre"/>
+            <StringItem index="9" value="Octubre"/>
+            <StringItem index="10" value="Noviembre"/>
+            <StringItem index="11" value="Diciembre"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mesCBActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="annoCB">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="11">
+            <StringItem index="0" value="2020"/>
+            <StringItem index="1" value="2021"/>
+            <StringItem index="2" value="2022"/>
+            <StringItem index="3" value="2023"/>
+            <StringItem index="4" value="2024"/>
+            <StringItem index="5" value="2025"/>
+            <StringItem index="6" value="2026"/>
+            <StringItem index="7" value="2027"/>
+            <StringItem index="8" value="2028"/>
+            <StringItem index="9" value="2029"/>
+            <StringItem index="10" value="2030"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tempMaxLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Temperatura M&#xe1;xima:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tempMinLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Temperatura M&#xed;nima:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="precipitacionesLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Precipitaciones:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="velMediaVientoLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Velocidad Media del Viento:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="evaporizacionLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Evaporizaci&#xf3;n:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="addButton">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="3"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Agregar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="cancelButton">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="caibarienLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="E. Caibari&#xe9;n"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tempMaxCaibarienText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tempMinCaibarienText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="precipitacionesCaibarienText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="velMediaVientoCaibarienText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="evaporizacionCaibarienText">
+    </Component>
+    <Component class="javax.swing.JLabel" name="SaguaLaGrandeLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="E. Sagua la Grande"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tempMaxSaguaLaGrandeText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tempMinSaguaLaGrandeText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="precipitacionesSaguaLaGrandeText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="velMediaVientoSaguaLaGrandeText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="evaporizacionSaguaLaGrandeText">
+    </Component>
+    <Component class="javax.swing.JLabel" name="laPiedraLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="E. La Piedra"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tempMaxLaPiedraText">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tempMaxLaPiedraTextActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tempMinLaPiedraText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="precipitacionesLaPiedraText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="velMediaVientoLaPiedraText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="evaporizacionLaPiedraText">
+    </Component>
+    <Component class="javax.swing.JLabel" name="santoDomingoLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="E. Santo Domingo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="evaporizacionSantoDomingoText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="velMediaVientoSantoDomingoText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="precipitacionesSantoDomingoText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tempMinSantoDomingoText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tempMaxSantoDomingoText">
+    </Component>
+    <Component class="javax.swing.JLabel" name="yabuLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="E. Yab&#xfa;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tempMaxYabuText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tempMinYabuText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="precipitacionesYabuText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="velMediaVientoYabuText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="evaporizacionYabuText">
+    </Component>
+  </SubComponents>
+</Form>
