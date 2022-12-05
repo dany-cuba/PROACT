@@ -202,4 +202,33 @@ public class Administracion {
         con = enlace.desconectar();
         return res>0;        
     }
+    
+    public void agregarOrg(String nombreO, String nombreE, String municipio, String tipo) throws SQLException, ClassNotFoundException{
+        con = enlace.conectar();
+        
+        ps = con.prepareStatement("INSERT INTO `organización` (`Nombre_O`, `Municipio`, `Tipo`, `Nombre_E`)"
+                + " VALUES ('"+nombreO+"', '"+municipio+"', '"+tipo+"', '"+nombreE+"')");
+        ps.executeUpdate();
+        con = enlace.desconectar();
+    }
+    
+    public boolean eliminarOrg(String nombre) throws SQLException, ClassNotFoundException{
+        con = enlace.conectar();
+        
+        ps = con.prepareStatement("DELETE FROM `organización` WHERE `Nombre_O` = '"+nombre+"'");
+        int res = ps.executeUpdate();
+        
+        con = enlace.desconectar();
+        return res>0; 
+    }
+    
+    public boolean revizarNombre(String nombre) throws SQLException, ClassNotFoundException{
+        con = enlace.conectar();
+        
+        ps = con.prepareStatement("SELECT * FROM `organización` WHERE `Nombre_O` = '"+nombre+"'");
+        rs = ps.executeQuery();
+        
+        con = enlace.desconectar();
+        return rs.next();
+    }
 }

@@ -1,6 +1,12 @@
 
 package Vista;
 
+import Clases.Administracion;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 public class Main extends javax.swing.JFrame {
 
     public Main() {
@@ -50,9 +56,19 @@ public class Main extends javax.swing.JFrame {
         organizacionesMenu.setText("Organizaciones");
 
         addOrg.setText("Agregar");
+        addOrg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addOrgActionPerformed(evt);
+            }
+        });
         organizacionesMenu.add(addOrg);
 
         delOrg.setText("Eliminar");
+        delOrg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delOrgActionPerformed(evt);
+            }
+        });
         organizacionesMenu.add(delOrg);
 
         menuOperaciones.add(organizacionesMenu);
@@ -97,6 +113,29 @@ public class Main extends javax.swing.JFrame {
         BuscarBoletinDialog dialog = new BuscarBoletinDialog(this, rootPaneCheckingEnabled);
         dialog.setVisible(true);
     }//GEN-LAST:event_generarBoletinMenuActionPerformed
+
+    private void addOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOrgActionPerformed
+        
+        AgregarOrganizacionDialog dialog = new AgregarOrganizacionDialog(this, rootPaneCheckingEnabled);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_addOrgActionPerformed
+
+    private void delOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delOrgActionPerformed
+        String nombre = JOptionPane.showInputDialog(null, "Escriba el nombre de la organización a eliminar:", "Eliminar", JOptionPane.INFORMATION_MESSAGE);
+        Administracion admin = new Administracion();
+        
+        
+        try {
+            if(admin.revizarNombre(nombre))
+            if(admin.eliminarOrg(nombre)){
+                JOptionPane.showMessageDialog(null, "Se ha eliminado la organización correctamente","Correcto", JOptionPane.INFORMATION_MESSAGE);
+            }else{
+                JOptionPane.showMessageDialog(null, "Ocurrio un error mientras se intentaba eliminar", "Error", JOptionPane.WARNING_MESSAGE);
+            }
+        } catch (SQLException | ClassNotFoundException ex) {
+            
+        }
+    }//GEN-LAST:event_delOrgActionPerformed
 
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
