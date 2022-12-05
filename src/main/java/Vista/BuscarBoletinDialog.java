@@ -13,6 +13,7 @@ public class BuscarBoletinDialog extends javax.swing.JDialog {
     
     public BuscarBoletinDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        
         initComponents();
         setLocationRelativeTo(parent);
     }

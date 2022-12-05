@@ -6,9 +6,9 @@ import Excepciones.FechaExistente;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-public class AddObservacionDialog extends javax.swing.JDialog {
+public class AgregarObservacionDialog extends javax.swing.JDialog {
 
-    public AddObservacionDialog(java.awt.Frame parent, boolean modal) {
+    public AgregarObservacionDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(parent);
@@ -323,24 +323,25 @@ public class AddObservacionDialog extends javax.swing.JDialog {
         try {
             admin.revizarErrorFecha(fecha);
             
-            admin.agregarObservaciones(fecha, Float.parseFloat(tempMaxCaibarienText.getText()), Float.parseFloat(tempMinCaibarienText.getText()),
+            admin.agregarObservacion(fecha, Float.parseFloat(tempMaxCaibarienText.getText()), Float.parseFloat(tempMinCaibarienText.getText()),
                     Float.parseFloat(precipitacionesCaibarienText.getText()), Float.parseFloat(velMediaVientoCaibarienText.getText()),
                     Float.parseFloat(evaporizacionCaibarienText.getText()), caibarienLabel.getText());
             
-            admin.agregarObservaciones(fecha, Float.parseFloat(tempMaxLaPiedraText.getText()), Float.parseFloat(tempMinLaPiedraText.getText()),
-                    Float.parseFloat(precipitacionesLaPiedraText.getText()), Float.parseFloat(velMediaVientoLaPiedraText.getText()),
-                    Float.parseFloat(evaporizacionLaPiedraText.getText()), laPiedraLabel.getText());
-            
-            admin.agregarObservaciones(fecha, Float.parseFloat(tempMaxSaguaLaGrandeText.getText()), Float.parseFloat(tempMinSaguaLaGrandeText.getText()),
+           
+            admin.agregarObservacion(fecha, Float.parseFloat(tempMaxSaguaLaGrandeText.getText()), Float.parseFloat(tempMinSaguaLaGrandeText.getText()),
                     Float.parseFloat(precipitacionesSaguaLaGrandeText.getText()), Float.parseFloat(velMediaVientoSaguaLaGrandeText.getText()),
                     Float.parseFloat(evaporizacionSaguaLaGrandeText.getText()), SaguaLaGrandeLabel.getText());
             
+             admin.agregarObservacion(fecha, Float.parseFloat(tempMaxLaPiedraText.getText()), Float.parseFloat(tempMinLaPiedraText.getText()),
+                    Float.parseFloat(precipitacionesLaPiedraText.getText()), Float.parseFloat(velMediaVientoLaPiedraText.getText()),
+                    Float.parseFloat(evaporizacionLaPiedraText.getText()), laPiedraLabel.getText());
             
-            admin.agregarObservaciones(fecha, Float.parseFloat(tempMaxSantoDomingoText.getText()), Float.parseFloat(tempMinSantoDomingoText.getText()),
+            
+            admin.agregarObservacion(fecha, Float.parseFloat(tempMaxSantoDomingoText.getText()), Float.parseFloat(tempMinSantoDomingoText.getText()),
                     Float.parseFloat(precipitacionesSantoDomingoText.getText()), Float.parseFloat(velMediaVientoSantoDomingoText.getText()),
                     Float.parseFloat(evaporizacionSantoDomingoText.getText()), santoDomingoLabel.getText());
         
-            admin.agregarObservaciones(fecha, Float.parseFloat(tempMaxYabuText.getText()), Float.parseFloat(tempMinYabuText.getText()),
+            admin.agregarObservacion(fecha, Float.parseFloat(tempMaxYabuText.getText()), Float.parseFloat(tempMinYabuText.getText()),
                     Float.parseFloat(precipitacionesYabuText.getText()), Float.parseFloat(velMediaVientoYabuText.getText()),
                     Float.parseFloat(evaporizacionYabuText.getText()), yabuLabel.getText());
         
@@ -375,20 +376,22 @@ public class AddObservacionDialog extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AddObservacionDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgregarObservacionDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AddObservacionDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgregarObservacionDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AddObservacionDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgregarObservacionDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AddObservacionDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgregarObservacionDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(() -> {
-            AddObservacionDialog dialog = new AddObservacionDialog(new javax.swing.JFrame(), true);
+            AgregarObservacionDialog dialog = new AgregarObservacionDialog(new javax.swing.JFrame(), true);
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {

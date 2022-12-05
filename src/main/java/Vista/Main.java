@@ -16,7 +16,6 @@ public class Main extends javax.swing.JFrame {
         menuOperaciones = new javax.swing.JMenu();
         boletinMenu = new javax.swing.JMenu();
         addBoletin = new javax.swing.JMenuItem();
-        delBoletin = new javax.swing.JMenuItem();
         modBoletin = new javax.swing.JMenuItem();
         organizacionesMenu = new javax.swing.JMenu();
         addOrg = new javax.swing.JMenuItem();
@@ -37,9 +36,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
         boletinMenu.add(addBoletin);
-
-        delBoletin.setText("Eliminar");
-        boletinMenu.add(delBoletin);
 
         modBoletin.setText("Modificar");
         modBoletin.addActionListener(new java.awt.event.ActionListener() {
@@ -88,11 +84,12 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void modBoletinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modBoletinActionPerformed
-        // TODO add your handling code here:
+        ModificarObservacionesDialog dialog = new ModificarObservacionesDialog(this, rootPaneCheckingEnabled);
+        dialog.setVisible(true);
     }//GEN-LAST:event_modBoletinActionPerformed
 
     private void addBoletinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBoletinActionPerformed
-        AddObservacionDialog dialog = new AddObservacionDialog(this, rootPaneCheckingEnabled);
+        AgregarObservacionDialog dialog = new AgregarObservacionDialog(this, rootPaneCheckingEnabled);
         dialog.setVisible(true);
     }//GEN-LAST:event_addBoletinActionPerformed
 
@@ -136,7 +133,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem addBoletin;
     private javax.swing.JMenuItem addOrg;
     private javax.swing.JMenu boletinMenu;
-    private javax.swing.JMenuItem delBoletin;
     private javax.swing.JMenuItem delOrg;
     private javax.swing.JMenuItem generarBoletinMenu;
     private javax.swing.JMenuBar menuBar;
