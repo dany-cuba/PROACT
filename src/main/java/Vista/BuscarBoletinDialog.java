@@ -1,7 +1,11 @@
 
 package Vista;
 
+import Clases.Administracion;
+import Excepciones.FechaExistente;
 import java.awt.Frame;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 
 public class BuscarBoletinDialog extends javax.swing.JDialog {
@@ -92,9 +96,21 @@ public class BuscarBoletinDialog extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mostrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarButtonActionPerformed
-        dispose();
-        MostrarBoletinDialog dialog = new MostrarBoletinDialog((Frame) this.getParent(), rootPaneCheckingEnabled);
-        dialog.setVisible(true);
+        try{
+            Administracion admin = new Administracion();
+            String fecha = admin.normalizarFecha(annoCB.getSelectedItem().toString(), mesCB.getSelectedItem().toString(), decenaCB.getSelectedItem().toString());
+        
+            if(admin.revizarFecha(fecha)){
+                dispose();
+                GenerarBoletinDialog dialog = new GenerarBoletinDialog((Frame) this.getParent(), rootPaneCheckingEnabled);
+                dialog.atInit(annoCB.getSelectedItem().toString(), mesCB.getSelectedItem().toString(), decenaCB.getSelectedItem().toString());
+                dialog.establecerCampos(fecha);
+                dialog.setVisible(true);
+            }
+            
+        } catch (FechaExistente | ClassNotFoundException | SQLException ex){
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
+        }       
     }//GEN-LAST:event_mostrarButtonActionPerformed
 
     public static void main(String args[]) {
@@ -122,17 +138,15 @@ public class BuscarBoletinDialog extends javax.swing.JDialog {
         //</editor-fold>
 
         /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                BuscarBoletinDialog dialog = new BuscarBoletinDialog(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            BuscarBoletinDialog dialog = new BuscarBoletinDialog(new javax.swing.JFrame(), true);
+            dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                @Override
+                public void windowClosing(java.awt.event.WindowEvent e) {
+                    System.exit(0);
+                }
+            });
+            dialog.setVisible(true);
         });
     }
 

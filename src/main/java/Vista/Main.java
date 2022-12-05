@@ -92,7 +92,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_modBoletinActionPerformed
 
     private void addBoletinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBoletinActionPerformed
-        AddBoletinDialog dialog = new AddBoletinDialog(this, rootPaneCheckingEnabled);
+        AddObservacionDialog dialog = new AddObservacionDialog(this, rootPaneCheckingEnabled);
         dialog.setVisible(true);
     }//GEN-LAST:event_addBoletinActionPerformed
 
