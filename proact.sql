@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-12-2022 a las 17:27:16
+-- Tiempo de generación: 08-12-2022 a las 23:44:52
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.2.30
 
@@ -20,6 +20,18 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `proact`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `actor_clave`
+--
+
+CREATE TABLE `actor_clave` (
+  `Nombre_A` varchar(50) NOT NULL,
+  `Tipo` varchar(30) NOT NULL,
+  `Nombre_M` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -46,30 +58,29 @@ INSERT INTO `estación` (`Nombre_E`, `Clasificación`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `observación`
+-- Estructura de tabla para la tabla `municipio`
 --
 
-CREATE TABLE `observación` (
-  `Fecha` varchar(20) NOT NULL,
-  `Temp_max` float NOT NULL,
-  `Temp_min` float NOT NULL,
-  `Precipitaciones` float NOT NULL,
-  `Media_viento` float NOT NULL,
-  `Evaporización_agua` float NOT NULL,
-  `Nombre_E` varchar(30) NOT NULL,
-  `id` int(11) NOT NULL
+CREATE TABLE `municipio` (
+  `Nombre_M` varchar(50) NOT NULL,
+  `Extensión_territorial` decimal(11,0) NOT NULL,
+  `Nombre_E` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `organización`
+-- Estructura de tabla para la tabla `observación`
 --
 
-CREATE TABLE `organización` (
-  `Nombre_O` varchar(30) NOT NULL,
-  `Municipio` varchar(30) NOT NULL,
-  `Tipo` varchar(50) NOT NULL,
+CREATE TABLE `observación` (
+  `id` int(11) NOT NULL,
+  `Fecha` varchar(30) NOT NULL,
+  `Temp_max` float NOT NULL,
+  `Temp_min` float NOT NULL,
+  `Precipitaciones` float NOT NULL,
+  `Media_viento` float NOT NULL,
+  `Evaporización_agua` float NOT NULL,
   `Nombre_E` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -78,23 +89,30 @@ CREATE TABLE `organización` (
 --
 
 --
+-- Indices de la tabla `actor_clave`
+--
+ALTER TABLE `actor_clave`
+  ADD PRIMARY KEY (`Nombre_A`),
+  ADD KEY `Nombre_M` (`Nombre_M`);
+
+--
 -- Indices de la tabla `estación`
 --
 ALTER TABLE `estación`
   ADD PRIMARY KEY (`Nombre_E`);
 
 --
+-- Indices de la tabla `municipio`
+--
+ALTER TABLE `municipio`
+  ADD PRIMARY KEY (`Nombre_M`),
+  ADD KEY `Nombre_E` (`Nombre_E`);
+
+--
 -- Indices de la tabla `observación`
 --
 ALTER TABLE `observación`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `Nombre_E` (`Nombre_E`);
-
---
--- Indices de la tabla `organización`
---
-ALTER TABLE `organización`
-  ADD PRIMARY KEY (`Nombre_O`),
   ADD KEY `Nombre_E` (`Nombre_E`);
 
 --
@@ -112,16 +130,22 @@ ALTER TABLE `observación`
 --
 
 --
+-- Filtros para la tabla `actor_clave`
+--
+ALTER TABLE `actor_clave`
+  ADD CONSTRAINT `actor_clave_ibfk_1` FOREIGN KEY (`Nombre_M`) REFERENCES `municipio` (`Nombre_M`);
+
+--
+-- Filtros para la tabla `municipio`
+--
+ALTER TABLE `municipio`
+  ADD CONSTRAINT `municipio_ibfk_1` FOREIGN KEY (`Nombre_E`) REFERENCES `estación` (`Nombre_E`);
+
+--
 -- Filtros para la tabla `observación`
 --
 ALTER TABLE `observación`
   ADD CONSTRAINT `observación_ibfk_1` FOREIGN KEY (`Nombre_E`) REFERENCES `estación` (`Nombre_E`);
-
---
--- Filtros para la tabla `organización`
---
-ALTER TABLE `organización`
-  ADD CONSTRAINT `organización_ibfk_1` FOREIGN KEY (`Nombre_E`) REFERENCES `estación` (`Nombre_E`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
