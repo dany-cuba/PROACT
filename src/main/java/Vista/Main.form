@@ -32,25 +32,25 @@
                 </MenuItem>
               </SubComponents>
             </Menu>
-            <Menu class="javax.swing.JMenu" name="organizacionesMenu">
+            <Menu class="javax.swing.JMenu" name="actorClaveMenu">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Organizaciones"/>
+                <Property name="text" type="java.lang.String" value="Actor Clave"/>
               </Properties>
               <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="addOrg">
+                <MenuItem class="javax.swing.JMenuItem" name="addAC">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Agregar"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addOrgActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addACActionPerformed"/>
                   </Events>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="delOrg">
+                <MenuItem class="javax.swing.JMenuItem" name="delAC">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Eliminar"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="delOrgActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="delACActionPerformed"/>
                   </Events>
                 </MenuItem>
               </SubComponents>

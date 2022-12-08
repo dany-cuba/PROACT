@@ -203,19 +203,19 @@ public class Administracion {
         return res>0;        
     }
     
-    public void agregarOrg(String nombreO, String nombreE, String municipio, String tipo) throws SQLException, ClassNotFoundException{
+    public void agregarActorC(String nombreA, String municipio, String tipo) throws SQLException, ClassNotFoundException{
         con = enlace.conectar();
         
-        ps = con.prepareStatement("INSERT INTO `organización` (`Nombre_O`, `Municipio`, `Tipo`, `Nombre_E`)"
-                + " VALUES ('"+nombreO+"', '"+municipio+"', '"+tipo+"', '"+nombreE+"')");
+        ps = con.prepareStatement("INSERT INTO `actor_clave` (`Nombre_A`, `Nombre_M`, `Tipo`)"
+                + " VALUES ('"+nombreA+"', '"+municipio+"', '"+tipo+"')");
         ps.executeUpdate();
         con = enlace.desconectar();
     }
     
-    public boolean eliminarOrg(String nombre) throws SQLException, ClassNotFoundException{
+    public boolean eliminarActorC(String nombre) throws SQLException, ClassNotFoundException{
         con = enlace.conectar();
         
-        ps = con.prepareStatement("DELETE FROM `organización` WHERE `Nombre_O` = '"+nombre+"'");
+        ps = con.prepareStatement("DELETE FROM `actor_clave` WHERE `Nombre_A` = '"+nombre+"'");
         int res = ps.executeUpdate();
         
         con = enlace.desconectar();
@@ -225,7 +225,7 @@ public class Administracion {
     public boolean revizarNombre(String nombre) throws SQLException, ClassNotFoundException{
         con = enlace.conectar();
         
-        ps = con.prepareStatement("SELECT * FROM `organización` WHERE `Nombre_O` = '"+nombre+"'");
+        ps = con.prepareStatement("SELECT * FROM `actor_clave` WHERE `Nombre_A` = '"+nombre+"'");
         rs = ps.executeQuery();
         
         con = enlace.desconectar();

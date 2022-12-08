@@ -3,14 +3,11 @@ package Vista;
 
 import Clases.Administracion;
 import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-public class AgregarOrganizacionDialog extends javax.swing.JDialog {
+public class AgregarActorClaveDialog extends javax.swing.JDialog {
 
-    public AgregarOrganizacionDialog(java.awt.Frame parent, boolean modal) {
+    public AgregarActorClaveDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(parent);
@@ -26,15 +23,13 @@ public class AgregarOrganizacionDialog extends javax.swing.JDialog {
         nombreOrgText = new javax.swing.JTextField();
         municipioLabel = new javax.swing.JLabel();
         municipioCB = new javax.swing.JComboBox<>();
-        estacionLabel = new javax.swing.JLabel();
-        estacionCB = new javax.swing.JComboBox<>();
         entidadRB = new javax.swing.JRadioButton();
         productorRB = new javax.swing.JRadioButton();
         agregarB = new javax.swing.JButton();
         CancelarB = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Agregar Organización");
+        setTitle("Agregar Actor Clave");
 
         nombreOrgLabel.setFont(new java.awt.Font("Segoe UI", 2, 16)); // NOI18N
         nombreOrgLabel.setText("Nombre:");
@@ -46,12 +41,6 @@ public class AgregarOrganizacionDialog extends javax.swing.JDialog {
 
         municipioCB.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         municipioCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Caibarién ", "Camajuaní ", "Corralillo ", "Encrucijada ", "Quemado de Gϋines ", "Remedios", "Sagua la Grande" }));
-
-        estacionLabel.setFont(new java.awt.Font("Segoe UI", 2, 16)); // NOI18N
-        estacionLabel.setText("Estación Correspondiente:");
-
-        estacionCB.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        estacionCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E. Caibarién", "E. Sagua la Grande", "E. La Piedra", "E. Santo Domingo", "E. Yabú" }));
 
         tipoBG.add(entidadRB);
         entidadRB.setFont(new java.awt.Font("Segoe UI", 2, 15)); // NOI18N
@@ -82,26 +71,13 @@ public class AgregarOrganizacionDialog extends javax.swing.JDialog {
         ContenedorLayout.setHorizontalGroup(
             ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ContenedorLayout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addComponent(nombreOrgLabel)
-                .addGap(18, 18, 18)
-                .addComponent(nombreOrgText, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(65, Short.MAX_VALUE))
-            .addGroup(ContenedorLayout.createSequentialGroup()
-                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ContenedorLayout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(municipioLabel)
-                        .addGap(32, 32, 32))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContenedorLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(entidadRB)
-                            .addComponent(estacionLabel))
-                        .addGap(19, 19, 19)))
+                .addGap(71, 71, 71)
+                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(municipioLabel)
+                    .addComponent(entidadRB))
+                .addGap(32, 32, 32)
                 .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(municipioCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(estacionCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(productorRB))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContenedorLayout.createSequentialGroup()
@@ -110,6 +86,12 @@ public class AgregarOrganizacionDialog extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addComponent(CancelarB)
                 .addGap(54, 54, 54))
+            .addGroup(ContenedorLayout.createSequentialGroup()
+                .addGap(98, 98, 98)
+                .addComponent(nombreOrgLabel)
+                .addGap(18, 18, 18)
+                .addComponent(nombreOrgText, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         ContenedorLayout.setVerticalGroup(
             ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,15 +104,11 @@ public class AgregarOrganizacionDialog extends javax.swing.JDialog {
                 .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(municipioLabel)
                     .addComponent(municipioCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(estacionLabel)
-                    .addComponent(estacionCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(44, 44, 44)
                 .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(entidadRB)
                     .addComponent(productorRB))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(agregarB)
                     .addComponent(CancelarB))
@@ -159,11 +137,11 @@ public class AgregarOrganizacionDialog extends javax.swing.JDialog {
         Administracion admin = new Administracion();
         try{
             if(entidadRB.isSelected() && !(productorRB.isSelected())){
-                admin.agregarOrg(nombreOrgText.getText(), estacionCB.getSelectedItem().toString(),
+                admin.agregarActorC(nombreOrgText.getText(),
                     municipioCB.getSelectedItem().toString(), entidadRB.getText());
             
             }else if(!(entidadRB.isSelected()) && productorRB.isSelected()) {
-                admin.agregarOrg(nombreOrgText.getText(), estacionCB.getSelectedItem().toString(),
+                admin.agregarActorC(nombreOrgText.getText(),
                     municipioCB.getSelectedItem().toString(), productorRB.getText());
             }else{
                 throw new Exception("Recuerde llenar el nombre y seleccionar un tipo de identidad");
@@ -194,19 +172,20 @@ public class AgregarOrganizacionDialog extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AgregarOrganizacionDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgregarActorClaveDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AgregarOrganizacionDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgregarActorClaveDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AgregarOrganizacionDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgregarActorClaveDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AgregarOrganizacionDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgregarActorClaveDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(() -> {
-            AgregarOrganizacionDialog dialog = new AgregarOrganizacionDialog(new javax.swing.JFrame(), true);
+            AgregarActorClaveDialog dialog = new AgregarActorClaveDialog(new javax.swing.JFrame(), true);
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {
@@ -222,8 +201,6 @@ public class AgregarOrganizacionDialog extends javax.swing.JDialog {
     private javax.swing.JPanel Contenedor;
     private javax.swing.JButton agregarB;
     private javax.swing.JRadioButton entidadRB;
-    private javax.swing.JComboBox<String> estacionCB;
-    private javax.swing.JLabel estacionLabel;
     private javax.swing.JComboBox<String> municipioCB;
     private javax.swing.JLabel municipioLabel;
     private javax.swing.JLabel nombreOrgLabel;

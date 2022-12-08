@@ -116,6 +116,7 @@ public class ModificarObservacionesDialog extends javax.swing.JDialog {
 
         annoCB.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         annoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" }));
+        annoCB.setSelectedIndex(2);
 
         caibarienLabel.setText("E. Caibarién");
 
@@ -202,8 +203,7 @@ public class ModificarObservacionesDialog extends javax.swing.JDialog {
                                         .addGap(70, 70, 70)
                                         .addComponent(mesLabel)
                                         .addGap(90, 90, 90)
-                                        .addComponent(annoLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addComponent(annoLabel)))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()

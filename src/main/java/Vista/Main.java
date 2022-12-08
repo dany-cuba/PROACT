@@ -23,9 +23,9 @@ public class Main extends javax.swing.JFrame {
         boletinMenu = new javax.swing.JMenu();
         addBoletin = new javax.swing.JMenuItem();
         modBoletin = new javax.swing.JMenuItem();
-        organizacionesMenu = new javax.swing.JMenu();
-        addOrg = new javax.swing.JMenuItem();
-        delOrg = new javax.swing.JMenuItem();
+        actorClaveMenu = new javax.swing.JMenu();
+        addAC = new javax.swing.JMenuItem();
+        delAC = new javax.swing.JMenuItem();
         generarBoletinMenu = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,25 +53,25 @@ public class Main extends javax.swing.JFrame {
 
         menuOperaciones.add(boletinMenu);
 
-        organizacionesMenu.setText("Organizaciones");
+        actorClaveMenu.setText("Actor Clave");
 
-        addOrg.setText("Agregar");
-        addOrg.addActionListener(new java.awt.event.ActionListener() {
+        addAC.setText("Agregar");
+        addAC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addOrgActionPerformed(evt);
+                addACActionPerformed(evt);
             }
         });
-        organizacionesMenu.add(addOrg);
+        actorClaveMenu.add(addAC);
 
-        delOrg.setText("Eliminar");
-        delOrg.addActionListener(new java.awt.event.ActionListener() {
+        delAC.setText("Eliminar");
+        delAC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                delOrgActionPerformed(evt);
+                delACActionPerformed(evt);
             }
         });
-        organizacionesMenu.add(delOrg);
+        actorClaveMenu.add(delAC);
 
-        menuOperaciones.add(organizacionesMenu);
+        menuOperaciones.add(actorClaveMenu);
 
         generarBoletinMenu.setText("Generar Boletín");
         generarBoletinMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -114,20 +114,20 @@ public class Main extends javax.swing.JFrame {
         dialog.setVisible(true);
     }//GEN-LAST:event_generarBoletinMenuActionPerformed
 
-    private void addOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOrgActionPerformed
+    private void addACActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addACActionPerformed
         
-        AgregarOrganizacionDialog dialog = new AgregarOrganizacionDialog(this, rootPaneCheckingEnabled);
+        AgregarActorClaveDialog dialog = new AgregarActorClaveDialog(this, rootPaneCheckingEnabled);
         dialog.setVisible(true);
-    }//GEN-LAST:event_addOrgActionPerformed
+    }//GEN-LAST:event_addACActionPerformed
 
-    private void delOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delOrgActionPerformed
+    private void delACActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delACActionPerformed
         String nombre = JOptionPane.showInputDialog(null, "Escriba el nombre de la organización a eliminar:", "Eliminar", JOptionPane.INFORMATION_MESSAGE);
         Administracion admin = new Administracion();
         
         
         try {
             if(admin.revizarNombre(nombre))
-            if(admin.eliminarOrg(nombre)){
+            if(admin.eliminarActorC(nombre)){
                 JOptionPane.showMessageDialog(null, "Se ha eliminado la organización correctamente","Correcto", JOptionPane.INFORMATION_MESSAGE);
             }else{
                 JOptionPane.showMessageDialog(null, "Ocurrio un error mientras se intentaba eliminar", "Error", JOptionPane.WARNING_MESSAGE);
@@ -135,7 +135,7 @@ public class Main extends javax.swing.JFrame {
         } catch (SQLException | ClassNotFoundException ex) {
             
         }
-    }//GEN-LAST:event_delOrgActionPerformed
+    }//GEN-LAST:event_delACActionPerformed
 
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -169,14 +169,14 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu actorClaveMenu;
+    private javax.swing.JMenuItem addAC;
     private javax.swing.JMenuItem addBoletin;
-    private javax.swing.JMenuItem addOrg;
     private javax.swing.JMenu boletinMenu;
-    private javax.swing.JMenuItem delOrg;
+    private javax.swing.JMenuItem delAC;
     private javax.swing.JMenuItem generarBoletinMenu;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu menuOperaciones;
     private javax.swing.JMenuItem modBoletin;
-    private javax.swing.JMenu organizacionesMenu;
     // End of variables declaration//GEN-END:variables
 }

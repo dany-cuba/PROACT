@@ -430,7 +430,7 @@ public class GenerarBoletinDialog extends javax.swing.JDialog {
         info.setAlwaysOnTop(true);
         info.setTitle("Gráfico");
         info.getContentPane().add(panel);
-        info.setPreferredSize(new java.awt.Dimension(450,450));
+        info.setPreferredSize(new java.awt.Dimension(500,450));
         info.pack();
         info.setLocationRelativeTo(null);
         info.setVisible(true);

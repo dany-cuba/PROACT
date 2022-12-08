@@ -47,6 +47,7 @@ public class BuscarBoletinDialog extends javax.swing.JDialog {
         annoLabel.setText("Año:");
 
         annoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" }));
+        annoCB.setSelectedIndex(2);
 
         mostrarButton.setText("Mostrar");
         mostrarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -107,6 +108,8 @@ public class BuscarBoletinDialog extends javax.swing.JDialog {
                 dialog.atInit(annoCB.getSelectedItem().toString(), mesCB.getSelectedItem().toString(), decenaCB.getSelectedItem().toString());
                 dialog.establecerCampos(fecha);
                 dialog.setVisible(true);
+            }else{
+                JOptionPane.showMessageDialog(null , "No existen observaciones para esa fecha", "Error", JOptionPane.WARNING_MESSAGE);
             }
             
         } catch (FechaExistente | ClassNotFoundException | SQLException ex){

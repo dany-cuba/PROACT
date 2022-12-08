@@ -94,6 +94,7 @@ public class AgregarObservacionDialog extends javax.swing.JDialog {
 
         annoCB.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         annoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" }));
+        annoCB.setSelectedIndex(2);
 
         tempMaxLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tempMaxLabel.setText("Temperatura Máxima:");
