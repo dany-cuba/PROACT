@@ -59,13 +59,12 @@ public class GenerarBoletinDialog extends javax.swing.JDialog {
         precipitacionesLabel = new javax.swing.JLabel();
         velMedVientoLabel = new javax.swing.JLabel();
         evaporizacionLabel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Boletín");
 
         Contenedor.setBackground(new java.awt.Color(255, 255, 255));
-
-        insmetIcon.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dany\\Documents\\NetBeansProjects\\PROACT\\src\\main\\java\\Recursos\\INSMET.png")); // NOI18N
 
         annoLabel.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
         annoLabel.setText("Año 2022");
@@ -74,7 +73,7 @@ public class GenerarBoletinDialog extends javax.swing.JDialog {
         decenaLabel.setText("1ra Decena de Enero");
 
         tempMaxLabel.setFont(new java.awt.Font("Segoe UI", 2, 16)); // NOI18N
-        tempMaxLabel.setText("Temperaturas Máximas:");
+        tempMaxLabel.setText("Temperaturas Máximas (°C):");
 
         tempMaxBoton.setFont(new java.awt.Font("Segoe UI", 2, 16)); // NOI18N
         tempMaxBoton.setText("Mostrar Gráfico");
@@ -85,7 +84,7 @@ public class GenerarBoletinDialog extends javax.swing.JDialog {
         });
 
         tempMinLabel.setFont(new java.awt.Font("Segoe UI", 2, 16)); // NOI18N
-        tempMinLabel.setText("Temperaturas Mínimas:");
+        tempMinLabel.setText("Temperaturas Mínimas (°C):");
 
         tempMinBoton.setFont(new java.awt.Font("Segoe UI", 2, 16)); // NOI18N
         tempMinBoton.setText("Mostrar Gráfico");
@@ -156,13 +155,16 @@ public class GenerarBoletinDialog extends javax.swing.JDialog {
         precipitacionesYabuText.setEnabled(false);
 
         precipitacionesLabel.setFont(new java.awt.Font("Segoe UI", 2, 16)); // NOI18N
-        precipitacionesLabel.setText("Precipitaciones:");
+        precipitacionesLabel.setText("Precipitaciones (mm):");
 
         velMedVientoLabel.setFont(new java.awt.Font("Segoe UI", 2, 16)); // NOI18N
-        velMedVientoLabel.setText("Velocidad Media del Viento:");
+        velMedVientoLabel.setText("Velocidad Media del Viento (km/h):");
 
         evaporizacionLabel.setFont(new java.awt.Font("Segoe UI", 2, 16)); // NOI18N
-        evaporizacionLabel.setText("Evaporización:");
+        evaporizacionLabel.setText("Evaporización (mm):");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("Img/INSMET.png"));
+        jLabel1.setText(" ");
 
         javax.swing.GroupLayout ContenedorLayout = new javax.swing.GroupLayout(Contenedor);
         Contenedor.setLayout(ContenedorLayout);
@@ -180,73 +182,92 @@ public class GenerarBoletinDialog extends javax.swing.JDialog {
                             .addComponent(evaporizacionLabel, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tempMinBoton)
-                            .addComponent(tempMaxBoton)
                             .addGroup(ContenedorLayout.createSequentialGroup()
-                                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(evaporizacionCaibarienText, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                                    .addComponent(velMediaVientoCaibarienText, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                                    .addComponent(precipitacionesCaibarienText, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                                    .addComponent(caibarienLabel, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(15, 15, 15)
-                                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(velMediaVientoSaguaLaGrandeText)
-                                    .addComponent(precipitacionesSaguaLaGrandeText, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(SaguaLaGrandeLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(evaporizacionSaguaLaGrandeText, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(velMediaVientoLaPiedraText, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(laPiedraLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(precipitacionesLaPiedraText, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(evaporizacionLaPiedraText, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
                                 .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tempMinBoton)
+                                    .addComponent(tempMaxBoton))
+                                .addGap(92, 92, 92))
+                            .addGroup(ContenedorLayout.createSequentialGroup()
+                                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(ContenedorLayout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(jLabel1))
                                     .addGroup(ContenedorLayout.createSequentialGroup()
                                         .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(evaporizacionSantoDomingoText, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(precipitacionesSantoDomingoText, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(velMediaVientoSantoDomingoText, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(27, 27, 27)
+                                            .addComponent(velMediaVientoCaibarienText)
+                                            .addComponent(evaporizacionCaibarienText)
+                                            .addGroup(ContenedorLayout.createSequentialGroup()
+                                                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(caibarienLabel)
+                                                    .addComponent(precipitacionesCaibarienText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(0, 0, Short.MAX_VALUE)))
                                         .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(velMediaVientoYabuText, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(precipitacionesYabuText, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(evaporizacionYabuText, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(ContenedorLayout.createSequentialGroup()
-                                        .addComponent(santoDomingoLabel)
+                                            .addGroup(ContenedorLayout.createSequentialGroup()
+                                                .addGap(21, 21, 21)
+                                                .addComponent(SaguaLaGrandeLabel)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(laPiedraLabel))
+                                            .addGroup(ContenedorLayout.createSequentialGroup()
+                                                .addGap(20, 20, 20)
+                                                .addComponent(precipitacionesSaguaLaGrandeText, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(precipitacionesLaPiedraText, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(ContenedorLayout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(velMediaVientoSaguaLaGrandeText, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(evaporizacionSaguaLaGrandeText, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(velMediaVientoLaPiedraText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(evaporizacionLaPiedraText, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                         .addGap(18, 18, 18)
-                                        .addComponent(yabuLabel)))))
-                        .addGap(0, 30, Short.MAX_VALUE))
+                                        .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(santoDomingoLabel)
+                                            .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(precipitacionesSantoDomingoText, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                                                .addComponent(velMediaVientoSantoDomingoText)
+                                                .addComponent(evaporizacionSantoDomingoText)))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(yabuLabel)
+                                            .addComponent(precipitacionesYabuText, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                                            .addComponent(velMediaVientoYabuText)
+                                            .addComponent(evaporizacionYabuText))))
+                                .addGap(0, 46, Short.MAX_VALUE))))
                     .addGroup(ContenedorLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
                         .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(ContenedorLayout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addComponent(decenaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(annoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 746, Short.MAX_VALUE)
+                                .addComponent(insmetIcon))
                             .addGroup(ContenedorLayout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addComponent(annoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(insmetIcon))))
+                                .addComponent(decenaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))))
         );
         ContenedorLayout.setVerticalGroup(
             ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ContenedorLayout.createSequentialGroup()
                 .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(insmetIcon)
                     .addGroup(ContenedorLayout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(annoLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(decenaLabel))
-                    .addComponent(insmetIcon))
-                .addGap(49, 49, 49)
-                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tempMaxLabel)
-                    .addComponent(tempMaxBoton))
-                .addGap(18, 18, 18)
-                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tempMinLabel)
-                    .addComponent(tempMinBoton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                        .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ContenedorLayout.createSequentialGroup()
+                                .addComponent(annoLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(decenaLabel))
+                            .addComponent(jLabel1))
+                        .addGap(18, 18, 18)
+                        .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tempMaxLabel)
+                            .addComponent(tempMaxBoton))
+                        .addGap(18, 18, 18)
+                        .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tempMinLabel)
+                            .addComponent(tempMinBoton))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(caibarienLabel)
                     .addComponent(SaguaLaGrandeLabel)
@@ -449,6 +470,7 @@ public class GenerarBoletinDialog extends javax.swing.JDialog {
     private javax.swing.JTextField evaporizacionSantoDomingoText;
     private javax.swing.JTextField evaporizacionYabuText;
     private javax.swing.JLabel insmetIcon;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel laPiedraLabel;
     private javax.swing.JTextField precipitacionesCaibarienText;
     private javax.swing.JTextField precipitacionesLaPiedraText;

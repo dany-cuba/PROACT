@@ -18,6 +18,9 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
         menuOperaciones = new javax.swing.JMenu();
         boletinMenu = new javax.swing.JMenu();
@@ -27,9 +30,14 @@ public class Main extends javax.swing.JFrame {
         addAC = new javax.swing.JMenuItem();
         delAC = new javax.swing.JMenuItem();
         generarBoletinMenu = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PROACT");
+        setIconImages(null);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("Img/ProAct.png"));
+        jLabel3.setText(" ");
 
         menuOperaciones.setText("Operaciones");
 
@@ -54,6 +62,11 @@ public class Main extends javax.swing.JFrame {
         menuOperaciones.add(boletinMenu);
 
         actorClaveMenu.setText("Actor Clave");
+        actorClaveMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                actorClaveMenuActionPerformed(evt);
+            }
+        });
 
         addAC.setText("Agregar");
         addAC.addActionListener(new java.awt.event.ActionListener() {
@@ -83,17 +96,44 @@ public class Main extends javax.swing.JFrame {
 
         menuBar.add(menuOperaciones);
 
+        jMenu1.setText("Información General");
+        menuBar.add(jMenu1);
+
         setJMenuBar(menuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addContainerGap(998, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel1)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel3)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 254, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addContainerGap(540, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel1)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel3)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -137,6 +177,10 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_delACActionPerformed
 
+    private void actorClaveMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actorClaveMenuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_actorClaveMenuActionPerformed
+
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -175,6 +219,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenu boletinMenu;
     private javax.swing.JMenuItem delAC;
     private javax.swing.JMenuItem generarBoletinMenu;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu menuOperaciones;
     private javax.swing.JMenuItem modBoletin;
