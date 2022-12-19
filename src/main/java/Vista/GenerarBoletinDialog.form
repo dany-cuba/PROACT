@@ -44,105 +44,127 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="tempMaxLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="tempMinLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="precipitacionesLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="velMedVientoLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="evaporizacionLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="tempMinBoton" min="-2" max="-2" attributes="0"/>
-                                      <Component id="tempMaxBoton" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="velMediaVientoCaibarienText" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="evaporizacionCaibarienText" alignment="0" max="32767" attributes="0"/>
-                                              <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="caibarienLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="precipitacionesCaibarienText" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                                  <Component id="SaguaLaGrandeLabel" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="laPiedraLabel" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                                  <Component id="precipitacionesSaguaLaGrandeText" min="-2" pref="101" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="precipitacionesLaPiedraText" min="-2" pref="99" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="velMediaVientoSaguaLaGrandeText" min="-2" pref="101" max="-2" attributes="0"/>
-                                                      <Component id="evaporizacionSaguaLaGrandeText" min="-2" pref="101" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="velMediaVientoLaPiedraText" min="-2" pref="100" max="-2" attributes="0"/>
-                                                      <Component id="evaporizacionLaPiedraText" min="-2" pref="100" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="santoDomingoLabel" min="-2" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="precipitacionesSantoDomingoText" alignment="0" pref="94" max="32767" attributes="0"/>
-                                                  <Component id="velMediaVientoSantoDomingoText" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="evaporizacionSantoDomingoText" alignment="0" max="32767" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="yabuLabel" min="-2" max="-2" attributes="0"/>
-                                              <Component id="precipitacionesYabuText" alignment="0" pref="96" max="32767" attributes="0"/>
-                                              <Component id="velMediaVientoYabuText" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="evaporizacionYabuText" alignment="0" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="0" pref="46" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="annoLabel" min="-2" pref="92" max="-2" attributes="0"/>
+                          <EmptySpace pref="746" max="32767" attributes="0"/>
+                          <Component id="insmetIcon" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="annoLabel" min="-2" pref="92" max="-2" attributes="0"/>
-                                  <EmptySpace pref="746" max="32767" attributes="0"/>
-                                  <Component id="insmetIcon" min="-2" max="-2" attributes="0"/>
+                          <Component id="decenaLabel" min="-2" pref="213" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="precipitacionesLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="tempMinLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="tempMaxLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="evaporizacionLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="velMedVientoLabel" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="tempMaxBoton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="92" pref="469" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="decenaLabel" min="-2" pref="213" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="velMediaVientoCaibarienText" max="32767" attributes="0"/>
+                                              <Component id="precipitacionesCaibarienText" max="32767" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                                  <Component id="caibarienLabel" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="evaporizacionCaibarienText" min="-2" pref="100" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                  <Component id="SaguaLaGrandeLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                                  <Component id="laPiedraLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="precipitacionesSaguaLaGrandeText" min="-2" pref="101" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="precipitacionesLaPiedraText" min="-2" pref="99" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Group type="103" groupAlignment="1" attributes="0">
+                                                              <Component id="velMediaVientoSaguaLaGrandeText" min="-2" pref="101" max="-2" attributes="0"/>
+                                                              <Component id="evaporizacionSaguaLaGrandeText" min="-2" pref="101" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="evaporizacionLaPiedraText" min="-2" pref="100" max="-2" attributes="0"/>
+                                                              <Component id="velMediaVientoLaPiedraText" min="-2" pref="100" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Component id="tempMinBoton" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="velMediaVientoSantoDomingoText" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                                                      <Component id="precipitacionesSantoDomingoText" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="precipitacionesYabuText" alignment="0" pref="96" max="32767" attributes="0"/>
+                                                      <Component id="velMediaVientoYabuText" alignment="0" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="santoDomingoLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                                  <Component id="yabuLabel" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="evaporizacionSantoDomingoText" min="-2" pref="94" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jButton1" max="32767" attributes="0"/>
+                                              <Component id="evaporizacionYabuText" pref="96" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
+                          <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -153,7 +175,7 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="insmetIcon" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
@@ -163,19 +185,19 @@
                               </Group>
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="tempMaxLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="tempMaxBoton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="tempMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="tempMinBoton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tempMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="caibarienLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="SaguaLaGrandeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -183,38 +205,36 @@
                       <Component id="santoDomingoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="yabuLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="precipitacionesCaibarienText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="precipitacionesSaguaLaGrandeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="precipitacionesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="precipitacionesLaPiedraText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="precipitacionesSantoDomingoText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="precipitacionesYabuText" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="precipitacionesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                          <Component id="evaporizacionCaibarienText" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="evaporizacionSaguaLaGrandeText" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="evaporizacionLaPiedraText" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="evaporizacionSantoDomingoText" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="evaporizacionYabuText" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="evaporizacionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="velMediaVientoCaibarienText" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="velMediaVientoSaguaLaGrandeText" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="velMediaVientoLaPiedraText" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="velMediaVientoSantoDomingoText" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="velMediaVientoYabuText" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="velMedVientoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                      </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="velMediaVientoSaguaLaGrandeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="velMediaVientoLaPiedraText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="velMediaVientoSantoDomingoText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="velMediaVientoYabuText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="velMediaVientoCaibarienText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="velMedVientoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="evaporizacionCaibarienText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="evaporizacionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="evaporizacionLaPiedraText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="evaporizacionSaguaLaGrandeText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="evaporizacionSantoDomingoText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="evaporizacionYabuText" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -467,6 +487,17 @@
             </Property>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="3"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Cerrar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

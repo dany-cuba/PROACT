@@ -40,6 +40,11 @@ public class Main extends javax.swing.JFrame {
         jLabel3.setText(" ");
 
         menuOperaciones.setText("Operaciones");
+        menuOperaciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuOperacionesActionPerformed(evt);
+            }
+        });
 
         boletinMenu.setText("Observaciones");
 
@@ -97,6 +102,11 @@ public class Main extends javax.swing.JFrame {
         menuBar.add(menuOperaciones);
 
         jMenu1.setText("Información General");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
         menuBar.add(jMenu1);
 
         setJMenuBar(menuBar);
@@ -123,7 +133,7 @@ public class Main extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel2)
-                .addContainerGap(540, Short.MAX_VALUE))
+                .addContainerGap(481, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -180,6 +190,15 @@ public class Main extends javax.swing.JFrame {
     private void actorClaveMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actorClaveMenuActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_actorClaveMenuActionPerformed
+
+    private void menuOperacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuOperacionesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuOperacionesActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jMenu1ActionPerformed
 
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

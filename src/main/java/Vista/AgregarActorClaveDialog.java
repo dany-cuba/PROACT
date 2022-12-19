@@ -58,7 +58,7 @@ public class AgregarActorClaveDialog extends javax.swing.JDialog {
             }
         });
 
-        CancelarB.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        CancelarB.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
         CancelarB.setText("Cancelar");
         CancelarB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,36 +70,41 @@ public class AgregarActorClaveDialog extends javax.swing.JDialog {
         Contenedor.setLayout(ContenedorLayout);
         ContenedorLayout.setHorizontalGroup(
             ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ContenedorLayout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(municipioLabel)
-                    .addComponent(entidadRB))
-                .addGap(32, 32, 32)
-                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(municipioCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(productorRB))
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContenedorLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(agregarB)
-                .addGap(18, 18, 18)
-                .addComponent(CancelarB)
+                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ContenedorLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ContenedorLayout.createSequentialGroup()
+                                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(ContenedorLayout.createSequentialGroup()
+                                        .addComponent(nombreOrgLabel)
+                                        .addGap(36, 36, 36)
+                                        .addComponent(nombreOrgText))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ContenedorLayout.createSequentialGroup()
+                                        .addComponent(municipioLabel)
+                                        .addGap(26, 26, 26)
+                                        .addComponent(municipioCB, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 74, Short.MAX_VALUE))
+                            .addGroup(ContenedorLayout.createSequentialGroup()
+                                .addGap(51, 51, 51)
+                                .addComponent(entidadRB)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(productorRB))))
+                    .addGroup(ContenedorLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(agregarB)
+                        .addGap(18, 18, 18)
+                        .addComponent(CancelarB)))
                 .addGap(54, 54, 54))
-            .addGroup(ContenedorLayout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addComponent(nombreOrgLabel)
-                .addGap(18, 18, 18)
-                .addComponent(nombreOrgText, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(65, Short.MAX_VALUE))
         );
         ContenedorLayout.setVerticalGroup(
             ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ContenedorLayout.createSequentialGroup()
                 .addGap(42, 42, 42)
-                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreOrgLabel)
-                    .addComponent(nombreOrgText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(nombreOrgText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nombreOrgLabel))
                 .addGap(32, 32, 32)
                 .addGroup(ContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(municipioLabel)
