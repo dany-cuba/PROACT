@@ -3,8 +3,6 @@ package Vista;
 
 import Clases.Administracion;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class Main extends javax.swing.JFrame {
