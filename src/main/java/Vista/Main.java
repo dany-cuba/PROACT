@@ -27,8 +27,10 @@ public class Main extends javax.swing.JFrame {
         actorClaveMenu = new javax.swing.JMenu();
         addAC = new javax.swing.JMenuItem();
         delAC = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         generarBoletinMenu = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PROACT");
@@ -87,6 +89,14 @@ public class Main extends javax.swing.JFrame {
         });
         actorClaveMenu.add(delAC);
 
+        jMenuItem1.setText("Mostrar");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        actorClaveMenu.add(jMenuItem1);
+
         menuOperaciones.add(actorClaveMenu);
 
         generarBoletinMenu.setText("Generar Boletín");
@@ -105,6 +115,15 @@ public class Main extends javax.swing.JFrame {
                 jMenu1ActionPerformed(evt);
             }
         });
+
+        jMenuItem2.setText("Mostrar");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
         menuBar.add(jMenu1);
 
         setJMenuBar(menuBar);
@@ -198,6 +217,18 @@ public class Main extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenu1ActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        MostrarActorClaveDialog dialog = new MostrarActorClaveDialog(this, rootPaneCheckingEnabled);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        InformacionDialog dialog = new InformacionDialog(this, rootPaneCheckingEnabled);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -240,6 +271,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu menuOperaciones;
     private javax.swing.JMenuItem modBoletin;
