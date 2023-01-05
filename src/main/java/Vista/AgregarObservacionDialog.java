@@ -2,6 +2,7 @@
 package Vista;
 
 import Clases.Administracion;
+import Clases.Observacion;
 import Excepciones.FechaExistente;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -96,7 +97,8 @@ public class AgregarObservacionDialog extends javax.swing.JDialog {
         });
 
         annoCB.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        annoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2019", "2020", "2021", "2022", " " }));
+        annoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" }));
+        annoCB.setSelectedIndex(2);
 
         tempMaxLabel.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         tempMaxLabel.setText("Temperatura Máxima:");
@@ -344,27 +346,27 @@ public class AgregarObservacionDialog extends javax.swing.JDialog {
         try {
             admin.revizarErrorFecha(fecha);
             
-            admin.agregarObservacion(fecha, Float.parseFloat(tempMaxCaibarienText.getText()), Float.parseFloat(tempMinCaibarienText.getText()),
+            admin.agregarObservacion(new Observacion(fecha, Float.parseFloat(tempMaxCaibarienText.getText()), Float.parseFloat(tempMinCaibarienText.getText()),
                     Float.parseFloat(precipitacionesCaibarienText.getText()), Float.parseFloat(velMediaVientoCaibarienText.getText()),
-                    Float.parseFloat(evaporizacionCaibarienText.getText()), caibarienLabel.getText());
+                    Float.parseFloat(evaporizacionCaibarienText.getText()), caibarienLabel.getText()));
             
            
-            admin.agregarObservacion(fecha, Float.parseFloat(tempMaxSaguaLaGrandeText.getText()), Float.parseFloat(tempMinSaguaLaGrandeText.getText()),
+            admin.agregarObservacion(new Observacion(fecha, Float.parseFloat(tempMaxSaguaLaGrandeText.getText()), Float.parseFloat(tempMinSaguaLaGrandeText.getText()),
                     Float.parseFloat(precipitacionesSaguaLaGrandeText.getText()), Float.parseFloat(velMediaVientoSaguaLaGrandeText.getText()),
-                    Float.parseFloat(evaporizacionSaguaLaGrandeText.getText()), SaguaLaGrandeLabel.getText());
+                    Float.parseFloat(evaporizacionSaguaLaGrandeText.getText()), SaguaLaGrandeLabel.getText()));
             
-             admin.agregarObservacion(fecha, Float.parseFloat(tempMaxLaPiedraText.getText()), Float.parseFloat(tempMinLaPiedraText.getText()),
+             admin.agregarObservacion(new Observacion(fecha, Float.parseFloat(tempMaxLaPiedraText.getText()), Float.parseFloat(tempMinLaPiedraText.getText()),
                     Float.parseFloat(precipitacionesLaPiedraText.getText()), Float.parseFloat(velMediaVientoLaPiedraText.getText()),
-                    Float.parseFloat(evaporizacionLaPiedraText.getText()), laPiedraLabel.getText());
+                    Float.parseFloat(evaporizacionLaPiedraText.getText()), laPiedraLabel.getText()));
             
             
-            admin.agregarObservacion(fecha, Float.parseFloat(tempMaxSantoDomingoText.getText()), Float.parseFloat(tempMinSantoDomingoText.getText()),
+            admin.agregarObservacion(new Observacion(fecha, Float.parseFloat(tempMaxSantoDomingoText.getText()), Float.parseFloat(tempMinSantoDomingoText.getText()),
                     Float.parseFloat(precipitacionesSantoDomingoText.getText()), Float.parseFloat(velMediaVientoSantoDomingoText.getText()),
-                    Float.parseFloat(evaporizacionSantoDomingoText.getText()), santoDomingoLabel.getText());
+                    Float.parseFloat(evaporizacionSantoDomingoText.getText()), santoDomingoLabel.getText()));
         
-            admin.agregarObservacion(fecha, Float.parseFloat(tempMaxYabuText.getText()), Float.parseFloat(tempMinYabuText.getText()),
+            admin.agregarObservacion(new Observacion(fecha, Float.parseFloat(tempMaxYabuText.getText()), Float.parseFloat(tempMinYabuText.getText()),
                     Float.parseFloat(precipitacionesYabuText.getText()), Float.parseFloat(velMediaVientoYabuText.getText()),
-                    Float.parseFloat(evaporizacionYabuText.getText()), yabuLabel.getText());
+                    Float.parseFloat(evaporizacionYabuText.getText()), yabuLabel.getText()));
         
             JOptionPane.showMessageDialog(null, "Agregado Correctamente", "Correcto", JOptionPane.INFORMATION_MESSAGE);
             dispose();

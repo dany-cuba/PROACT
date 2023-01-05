@@ -46,7 +46,8 @@ public class BuscarBoletinDialog extends javax.swing.JDialog {
         annoLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         annoLabel.setText("Año:");
 
-        annoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2019", "2020", "2021", "2022", " " }));
+        annoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" }));
+        annoCB.setSelectedIndex(2);
 
         mostrarButton.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         mostrarButton.setText("Mostrar");

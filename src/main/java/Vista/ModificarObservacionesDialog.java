@@ -2,6 +2,7 @@
 package Vista;
 
 import Clases.Administracion;
+import Clases.Observacion;
 import Excepciones.FechaExistente;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -118,7 +119,8 @@ public class ModificarObservacionesDialog extends javax.swing.JDialog {
         annoLabel.setText("Año:");
 
         annoCB.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        annoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2019", "2020", "2021", "2022", " " }));
+        annoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" }));
+        annoCB.setSelectedIndex(2);
 
         caibarienLabel.setText("E. Caibarién");
 
@@ -415,13 +417,13 @@ public class ModificarObservacionesDialog extends javax.swing.JDialog {
             if(admin.revizarFecha(fecha)){
                if(JOptionPane.showConfirmDialog(null, "Seguro desea borrar las observaciones de esta fecha ", "Confirmación", 2, JOptionPane.WARNING_MESSAGE) == 0){
                     
-                    if(admin.eliminarObservacion(fecha)){
+                    if(admin.eliminarObservacion(new Observacion(fecha, 0, 0, 0, 0, 0, null))){
                         JOptionPane.showMessageDialog(null, "Se han eliminado las observaciones correctamente","Correcto", JOptionPane.INFORMATION_MESSAGE);
                         limpiarCampos();
                     }else{
                         throw new FechaExistente("Ha ocurrido un error al eliminar la observación");
                     }
-                } 
+                }
             }
         } catch (SQLException | ClassNotFoundException | FechaExistente ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
@@ -435,26 +437,26 @@ public class ModificarObservacionesDialog extends javax.swing.JDialog {
         String fecha = admin.normalizarFecha(annoCB.getSelectedItem().toString(), mesCB.getSelectedItem().toString(), decenaCB.getSelectedItem().toString());
         
         try {            
-            admin.modificarObservacion(fecha, Float.parseFloat(tempMaxCaibarienText.getText()), Float.parseFloat(tempMinCaibarienText.getText()),
+            admin.modificarObservacion(new Observacion(fecha, Float.parseFloat(tempMaxCaibarienText.getText()), Float.parseFloat(tempMinCaibarienText.getText()),
                     Float.parseFloat(precipitacionesCaibarienText.getText()), Float.parseFloat(velMediaVientoCaibarienText.getText()),
-                    Float.parseFloat(evaporizacionCaibarienText.getText()), caibarienLabel.getText());
+                    Float.parseFloat(evaporizacionCaibarienText.getText()), caibarienLabel.getText()));
             
-            admin.modificarObservacion(fecha, Float.parseFloat(tempMaxLaPiedraText.getText()), Float.parseFloat(tempMinLaPiedraText.getText()),
+            admin.modificarObservacion(new Observacion(fecha, Float.parseFloat(tempMaxLaPiedraText.getText()), Float.parseFloat(tempMinLaPiedraText.getText()),
                     Float.parseFloat(precipitacionesLaPiedraText.getText()), Float.parseFloat(velMediaVientoLaPiedraText.getText()),
-                    Float.parseFloat(evaporizacionLaPiedraText.getText()), laPiedraLabel.getText());
+                    Float.parseFloat(evaporizacionLaPiedraText.getText()), laPiedraLabel.getText()));
             
-            admin.modificarObservacion(fecha, Float.parseFloat(tempMaxSaguaLaGrandeText.getText()), Float.parseFloat(tempMinSaguaLaGrandeText.getText()),
+            admin.modificarObservacion(new Observacion(fecha, Float.parseFloat(tempMaxSaguaLaGrandeText.getText()), Float.parseFloat(tempMinSaguaLaGrandeText.getText()),
                     Float.parseFloat(precipitacionesSaguaLaGrandeText.getText()), Float.parseFloat(velMediaVientoSaguaLaGrandeText.getText()),
-                    Float.parseFloat(evaporizacionSaguaLaGrandeText.getText()), SaguaLaGrandeLabel.getText());
+                    Float.parseFloat(evaporizacionSaguaLaGrandeText.getText()), SaguaLaGrandeLabel.getText()));
             
             
-            admin.modificarObservacion(fecha, Float.parseFloat(tempMaxSantoDomingoText.getText()), Float.parseFloat(tempMinSantoDomingoText.getText()),
+            admin.modificarObservacion(new Observacion(fecha, Float.parseFloat(tempMaxSantoDomingoText.getText()), Float.parseFloat(tempMinSantoDomingoText.getText()),
                     Float.parseFloat(precipitacionesSantoDomingoText.getText()), Float.parseFloat(velMediaVientoSantoDomingoText.getText()),
-                    Float.parseFloat(evaporizacionSantoDomingoText.getText()), santoDomingoLabel.getText());
+                    Float.parseFloat(evaporizacionSantoDomingoText.getText()), santoDomingoLabel.getText()));
         
-            admin.modificarObservacion(fecha, Float.parseFloat(tempMaxYabuText.getText()), Float.parseFloat(tempMinYabuText.getText()),
+            admin.modificarObservacion(new Observacion(fecha, Float.parseFloat(tempMaxYabuText.getText()), Float.parseFloat(tempMinYabuText.getText()),
                     Float.parseFloat(precipitacionesYabuText.getText()), Float.parseFloat(velMediaVientoYabuText.getText()),
-                    Float.parseFloat(evaporizacionYabuText.getText()), yabuLabel.getText());
+                    Float.parseFloat(evaporizacionYabuText.getText()), yabuLabel.getText()));
         
             JOptionPane.showMessageDialog(null, "Modificado Correctamente", "Correcto", JOptionPane.INFORMATION_MESSAGE);
             dispose();

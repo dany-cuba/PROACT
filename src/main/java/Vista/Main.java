@@ -1,6 +1,7 @@
 
 package Vista;
 
+import Clases.ActorClave;
 import Clases.Administracion;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -16,9 +17,7 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        photo = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
         menuOperaciones = new javax.swing.JMenu();
         boletinMenu = new javax.swing.JMenu();
@@ -36,8 +35,7 @@ public class Main extends javax.swing.JFrame {
         setTitle("PROACT");
         setIconImages(null);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("Img/ProAct.png"));
-        jLabel3.setText(" ");
+        photo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dany\\Documents\\NetBeansProjects\\PROACT\\src\\main\\java\\Recursos\\Principal.png")); // NOI18N
 
         menuOperaciones.setText("Operaciones");
         menuOperaciones.addActionListener(new java.awt.event.ActionListener() {
@@ -132,35 +130,11 @@ public class Main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addContainerGap(998, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel1)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel3)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(photo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addContainerGap(481, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel1)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel3)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(photo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -194,7 +168,7 @@ public class Main extends javax.swing.JFrame {
         
         try {
             if(admin.revizarNombre(nombre))
-            if(admin.eliminarActorC(nombre)){
+            if(admin.eliminarActorC(new ActorClave(nombre,null,null))){
                 JOptionPane.showMessageDialog(null, "Se ha eliminado la organización correctamente","Correcto", JOptionPane.INFORMATION_MESSAGE);
             }else{
                 JOptionPane.showMessageDialog(null, "Ocurrio un error mientras se intentaba eliminar", "Error", JOptionPane.WARNING_MESSAGE);
@@ -267,14 +241,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenu boletinMenu;
     private javax.swing.JMenuItem delAC;
     private javax.swing.JMenuItem generarBoletinMenu;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu menuOperaciones;
     private javax.swing.JMenuItem modBoletin;
+    private javax.swing.JLabel photo;
     // End of variables declaration//GEN-END:variables
 }

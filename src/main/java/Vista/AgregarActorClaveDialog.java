@@ -1,6 +1,7 @@
 
 package Vista;
 
+import Clases.ActorClave;
 import Clases.Administracion;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -142,12 +143,12 @@ public class AgregarActorClaveDialog extends javax.swing.JDialog {
         Administracion admin = new Administracion();
         try{
             if(entidadRB.isSelected() && !(productorRB.isSelected())){
-                admin.agregarActorC(nombreOrgText.getText(),
-                    municipioCB.getSelectedItem().toString(), entidadRB.getText());
+                admin.agregarActorC(new ActorClave(nombreOrgText.getText(),
+                    entidadRB.getText(),municipioCB.getSelectedItem().toString()));
             
             }else if(!(entidadRB.isSelected()) && productorRB.isSelected()) {
-                admin.agregarActorC(nombreOrgText.getText(),
-                    municipioCB.getSelectedItem().toString(), productorRB.getText());
+                admin.agregarActorC(new ActorClave(nombreOrgText.getText(),
+                        productorRB.getText(), municipioCB.getSelectedItem().toString()));
             }else{
                 throw new Exception("Recuerde llenar el nombre y seleccionar un tipo de identidad");
             }

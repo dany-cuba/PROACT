@@ -13,73 +13,25 @@ public class Administracion {
     static PreparedStatement ps;
     static ResultSet rs;
     
-    public void agregarObservacion(String fecha, float temp_max, float temp_min, float precip,
-                                     float vel_media, float evaporiz, String entidad)   throws SQLException, ClassNotFoundException{
+    public void agregarObservacion(Observacion o)   throws SQLException, ClassNotFoundException{
         
         con = enlace.conectar();
         
-        switch (entidad) {
-            case "E. Caibarién" -> {
-                ps = con.prepareStatement("INSERT INTO `observación` (`Fecha`, `Temp_max`, `Temp_min`, `Precipitaciones`, `Media_viento`, `Evaporización_agua`, `Nombre_E`)"
-                                                        + " VALUES ('"+fecha+"', '"+temp_max+"', '"+temp_min+"', '"+precip+"', '"+vel_media+"', '"+evaporiz+"', '"+entidad+"')");
-                ps.executeUpdate();
-            }
-            case "E. La Piedra" -> {
-                ps = con.prepareStatement("INSERT INTO `observación` (`Fecha`, `Temp_max`, `Temp_min`, `Precipitaciones`, `Media_viento`, `Evaporización_agua`, `Nombre_E`)"
-                                                        + " VALUES ('"+fecha+"', '"+temp_max+"', '"+temp_min+"', '"+precip+"', '"+vel_media+"', '"+evaporiz+"', '"+entidad+"')");
-                ps.executeUpdate();
-            }
-            case "E. Sagua la Grande" -> {
-                ps = con.prepareStatement("INSERT INTO `observación` (`Fecha`, `Temp_max`, `Temp_min`, `Precipitaciones`, `Media_viento`, `Evaporización_agua`, `Nombre_E`)"
-                                                        + " VALUES ('"+fecha+"', '"+temp_max+"', '"+temp_min+"', '"+precip+"', '"+vel_media+"', '"+evaporiz+"', '"+entidad+"')");
-                ps.executeUpdate();
-            }
-            case "E. Santo Domingo" -> {
-                ps = con.prepareStatement("INSERT INTO `observación` (`Fecha`, `Temp_max`, `Temp_min`, `Precipitaciones`, `Media_viento`, `Evaporización_agua`, `Nombre_E`)"
-                                                        + " VALUES ('"+fecha+"', '"+temp_max+"', '"+temp_min+"', '"+precip+"', '"+vel_media+"', '"+evaporiz+"', '"+entidad+"')");
-                ps.executeUpdate();
-            }
-            case "E. Yabú" -> {
-                ps = con.prepareStatement("INSERT INTO `observación` (`Fecha`, `Temp_max`, `Temp_min`, `Precipitaciones`, `Media_viento`, `Evaporización_agua`, `Nombre_E`)"
-                                                        + " VALUES ('"+fecha+"', '"+temp_max+"', '"+temp_min+"', '"+precip+"', '"+vel_media+"', '"+evaporiz+"', '"+entidad+"')");
-                ps.executeUpdate();
-            }
-        }
+            ps = con.prepareStatement("INSERT INTO `observación` (`Fecha`, `Temp_max`, `Temp_min`, `Precipitaciones`, `Media_viento`, `Evaporización_agua`, `Nombre_E`)"
+                                                        + " VALUES ('"+o.getFecha()+"', '"+o.getTempMax()+"', '"+o.getTempMin()+"', '"+o.getPrecipitacion()+"', '"+o.getMediaViento()+"', '"+o.getEvapor()+"', '"+o.getNombreEstacion()+"')");
+            ps.executeUpdate();
+            
         con = enlace.desconectar();
     }
     
-    public void modificarObservacion(String fecha, float temp_max, float temp_min, float precip,
-                                     float vel_media, float evaporiz, String entidad)   throws SQLException, ClassNotFoundException{
+    public void modificarObservacion(Observacion o)   throws SQLException, ClassNotFoundException{
         
         con = enlace.conectar();
         
-        switch (entidad) {
-            case "E. Caibarién" -> {
-                ps = con.prepareStatement("UPDATE `observación` SET `Temp_max`='"+temp_max+"',`Temp_min`='"+temp_min+"' ,`Precipitaciones`='"+precip+"',"
-                        + "`Media_viento`='"+vel_media+"',`Evaporización_agua`='"+evaporiz+"' WHERE `Fecha`= '"+fecha+"' AND `Nombre_E` = '"+entidad+"'");
-                ps.executeUpdate();
-            }
-            case "E. La Piedra" -> {
-                ps = con.prepareStatement("UPDATE `observación` SET `Temp_max`='"+temp_max+"',`Temp_min`='"+temp_min+"' ,`Precipitaciones`='"+precip+"',"
-                        + "`Media_viento`='"+vel_media+"',`Evaporización_agua`='"+evaporiz+"' WHERE `Fecha`= '"+fecha+"' AND `Nombre_E` = '"+entidad+"'");
-                ps.executeUpdate();
-            }
-            case "E. Sagua la Grande" -> {
-                ps = con.prepareStatement("UPDATE `observación` SET `Temp_max`='"+temp_max+"',`Temp_min`='"+temp_min+"' ,`Precipitaciones`='"+precip+"',"
-                        + "`Media_viento`='"+vel_media+"',`Evaporización_agua`='"+evaporiz+"' WHERE `Fecha`= '"+fecha+"' AND `Nombre_E` = '"+entidad+"'");
-                ps.executeUpdate();
-            }
-            case "E. Santo Domingo" -> {
-                ps = con.prepareStatement("UPDATE `observación` SET `Temp_max`='"+temp_max+"',`Temp_min`='"+temp_min+"' ,`Precipitaciones`='"+precip+"',"
-                        + "`Media_viento`='"+vel_media+"',`Evaporización_agua`='"+evaporiz+"' WHERE `Fecha`= '"+fecha+"' AND `Nombre_E` = '"+entidad+"'");
-                ps.executeUpdate();
-            }
-            case "E. Yabú" -> {
-                ps = con.prepareStatement("UPDATE `observación` SET `Temp_max`='"+temp_max+"',`Temp_min`='"+temp_min+"' ,`Precipitaciones`='"+precip+"',"
-                        + "`Media_viento`='"+vel_media+"',`Evaporización_agua`='"+evaporiz+"' WHERE `Fecha`= '"+fecha+"' AND `Nombre_E` = '"+entidad+"'");
-                ps.executeUpdate();
-            }
-        }
+            ps = con.prepareStatement("UPDATE `observación` SET `Temp_max`='"+o.getTempMax()+"',`Temp_min`='"+o.getTempMin()+"' ,`Precipitaciones`='"+o.getPrecipitacion()+"',"
+                    + "`Media_viento`='"+o.getMediaViento()+"',`Evaporización_agua`='"+o.getEvapor()+"' WHERE `Fecha`= '"+o.getFecha()+"' AND `Nombre_E` = '"+o.getNombreEstacion()+"'");
+            ps.executeUpdate();
+         
         con = enlace.desconectar();
     }
     
@@ -117,13 +69,6 @@ public class Administracion {
         
         String[][] matriz = new String[5][5];
         con = enlace.conectar();
-        
-        String[] estacion = new String[5];
-        estacion[0] = "E. Caibarién";
-        estacion[1] = "E. Sagua la Grande";
-        estacion[2] = "E. La Piedra";
-        estacion[3] = "E. Santo Domingo";
-        estacion[4] = "E. Yabú";
         
         String[] Observ = new String[5];
         Observ[0] = "Temp_max";
@@ -193,29 +138,29 @@ public class Administracion {
         return fecha;
     }
 
-    public boolean eliminarObservacion(String fecha) throws SQLException, ClassNotFoundException, FechaExistente {
+    public boolean eliminarObservacion(Observacion o) throws SQLException, ClassNotFoundException, FechaExistente {
         con = enlace.conectar();
         
-        ps = con.prepareStatement("DELETE FROM `observación` WHERE `Fecha` = '"+fecha+"'");
+        ps = con.prepareStatement("DELETE FROM `observación` WHERE `Fecha` = '"+o.getFecha()+"'");
         int res = ps.executeUpdate();
         
         con = enlace.desconectar();
         return res>0;        
     }
     
-    public void agregarActorC(String nombreA, String municipio, String tipo) throws SQLException, ClassNotFoundException{
+    public void agregarActorC(ActorClave actor) throws SQLException, ClassNotFoundException{
         con = enlace.conectar();
         
         ps = con.prepareStatement("INSERT INTO `actor_clave` (`Nombre_A`, `Nombre_M`, `Tipo`)"
-                + " VALUES ('"+nombreA+"', '"+municipio+"', '"+tipo+"')");
+                + " VALUES ('"+actor.nombre+"', '"+actor.municipio+"', '"+actor.tipo+"')");
         ps.executeUpdate();
         con = enlace.desconectar();
     }
     
-    public boolean eliminarActorC(String nombre) throws SQLException, ClassNotFoundException{
+    public boolean eliminarActorC(ActorClave actor) throws SQLException, ClassNotFoundException{
         con = enlace.conectar();
         
-        ps = con.prepareStatement("DELETE FROM `actor_clave` WHERE `Nombre_A` = '"+nombre+"'");
+        ps = con.prepareStatement("DELETE FROM `actor_clave` WHERE `Nombre_A` = '"+actor.nombre+"'");
         int res = ps.executeUpdate();
         
         con = enlace.desconectar();
